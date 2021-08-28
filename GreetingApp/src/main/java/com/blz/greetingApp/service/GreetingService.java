@@ -2,6 +2,7 @@ package com.blz.greetingApp.service;
 
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.blz.greetingApp.model.Greeting;
@@ -13,6 +14,8 @@ public class GreetingService implements IgreetingService
 {
 	private static final String template = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
+	
+	@Autowired
 	private GreetingRepository greetingRepository;
 
 	@Override
